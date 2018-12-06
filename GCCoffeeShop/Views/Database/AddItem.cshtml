@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "AddItem";
+}
+
+<h2>Add new item</h2>
+<div class="container">
+    <form action="/Database/SaveItem" method="post">
+        <input type="hidden" name="ItemID" />
+        <div class="form-group">
+            <input type="text" class="form-control" name="Name" placeholder="Name" required />
+            <input type="text" class="form-control" name="Description" placeholder="Description" required />
+            <input type="text" class="form-control" name="Quantity" placeholder="Quantity" required />
+            <input type="text" class="form-control" pattern="([1-9]{1}[0-9]{0,2})(\d{3})*(\.\d{2})?$|^(0)?(\.\d{2})?$|^(\$0)?(\.\d{2})?$|^(\$\.)(\d{2})?" name="Price" placeholder="Price" required />
+        </div>
+        
+
+        <input type="submit" class="btn-group-lg" />
+    </form>
+</div>

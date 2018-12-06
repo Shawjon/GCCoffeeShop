@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "ItemList";
+}
+
+<h2>ItemList</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Item ID
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+           
+        </th>
+        <th>
+           
+        </th>
+        
+    </tr>
+    @foreach (var item in ViewBag.ItemList)
+    {
+        <tr>
+            <td>@item.ItemID</td>
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+            <td>@item.Quantity</td>
+            <td>$@item.Price</td>
+
+        </tr>
+    }
+
+</table>
+
+<a href="~/Database/AddItem" class="btn-default ">Click here to add a new Item</a>
+

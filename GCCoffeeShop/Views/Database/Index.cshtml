@@ -41,19 +41,21 @@
     </tr>
     @foreach (var user in ViewBag.UserList)
     {
-        <tr>
-            <td>@user.UserID</td>
-            <td>@user.FirstName</td>
-            <td>@user.LastName</td>
-            <td>@user.Birthday</td>
-            <td>@user.Email</td>
-            <td>@user.PhoneNumber</td>
-            <td>@user.Address</td>
-            <td>@user.City</td>
-            <td>@user.PostalCode</td>
-            <td>@user.State</td>
+    <tr>
+        <td>@user.UserID</td>
+        <td>@user.FirstName</td>
+        <td>@user.LastName</td>
+        <td>@user.Birthday</td>
+        <td>@user.Email</td>
+        <td>@user.PhoneNumber</td>
+        <td>@user.Address</td>
+        <td>@user.City</td>
+        <td>@user.PostalCode</td>
+        <td>@user.State</td>
+        <td><a href="database/EditUser?UserID=@user.UserID" class="btn-default ">Edit this User</a></td>
+        <td><a href="database/DeleteUser?UserID=@user.UserID" class="btn-default ">Delete this User</a></td>
 
-        </tr>
+    </tr>
     }
 
 </table>
